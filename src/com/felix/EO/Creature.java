@@ -6,7 +6,7 @@ public abstract class Creature {
     protected String nom;
     protected HashMap<String,Integer> caracteristique;
 
-    abstract int attacker();
+    abstract int attacker(String arme);
     abstract boolean fuir();
     abstract void inventaire(String objet);
 

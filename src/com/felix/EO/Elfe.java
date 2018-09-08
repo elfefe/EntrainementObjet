@@ -27,8 +27,9 @@ public class Elfe extends Personnage implements Ressources{
     }
 
     @Override
-    int attacker() {
-        return 0;
+    int attacker(String arme) {
+        int attaque = caracteristique.get("Force")+Integer.parseInt(descriptif[objets.get(arme)][1].toString());
+        return attaque;
     }
 
     @Override
