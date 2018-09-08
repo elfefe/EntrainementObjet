@@ -5,8 +5,10 @@ import java.util.HashMap;
 public abstract class Creature {
     protected String nom;
     protected HashMap<String,Integer> caracteristique;
+    protected String arme;
 
-    abstract int attacker(String arme);
+    abstract int attacker(String arme,Creature creature);
+    abstract void perdreVie(Creature ennemi,int degat);
     abstract boolean fuir();
     abstract void inventaire(String objet);
 

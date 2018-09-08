@@ -27,9 +27,16 @@ public class Elfe extends Personnage implements Ressources{
     }
 
     @Override
-    int attacker(String arme) {
+    int attacker(String arme,Creature ennemi) {
         int attaque = caracteristique.get("Force")+Integer.parseInt(descriptif[objets.get(arme)][1].toString());
+        perdreVie(ennemi,attaque);
         return attaque;
+    }
+
+    @Override
+    void perdreVie(Creature ennemi, int degat){
+        int vieRetire = degat - (degat -ennemi.caracteristique.get("Resistance"));
+        ennemi.caracteristique.replace("Vie",ennemi.caracteristique.get("Vie"),ennemi.caracteristique.get("Vie") - vieRetire);
     }
 
     @Override
