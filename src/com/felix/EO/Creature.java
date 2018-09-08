@@ -12,10 +12,10 @@ public abstract class Creature {
 
     protected void setCaracteristique(int force, int resistance,int intelligence,int agilite){
         caracteristique = new HashMap<>();
-        caracteristique.put("Force",0);
-        caracteristique.put("Resistance",0);
-        caracteristique.put("Intelligence",0);
-        caracteristique.put("Agilité",0);
+        caracteristique.put("Force",force);
+        caracteristique.put("Resistance",resistance);
+        caracteristique.put("Intelligence",intelligence);
+        caracteristique.put("Agilité",agilite);
         caracteristique.put("Vie",100);
     }
 }
