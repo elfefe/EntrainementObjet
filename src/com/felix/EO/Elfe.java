@@ -3,7 +3,8 @@ package com.felix.EO;
 import java.util.HashMap;
 
 public class Elfe extends Personnage {
-    public Elfe(){
+    public Elfe(String nom){
+        this.nom = nom;
         setCaracteristique(8,7,9,10);
     }
 
@@ -28,7 +29,6 @@ public class Elfe extends Personnage {
     }
 
     @Override
-    String inventaire(Ressources[] objet) {
-        return null;
+    void inventaire(Ressources[] objet) {
     }
 }
