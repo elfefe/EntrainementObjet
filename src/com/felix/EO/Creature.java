@@ -8,7 +8,7 @@ public abstract class Creature {
 
     abstract int attacker();
     abstract boolean fuir();
-    abstract void inventaire(Ressources[] objet);
+    abstract void inventaire(String objet);
 
     protected void setCaracteristique(int force, int resistance,int intelligence,int agilite){
         caracteristique = new HashMap<>();
