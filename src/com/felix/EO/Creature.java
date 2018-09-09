@@ -8,7 +8,7 @@ public abstract class Creature implements Ressources {
     protected String arme;
 
     abstract boolean fuir();
-    abstract void inventaire(String objet);
+    abstract void inventaire();
 
     protected void setCaracteristique(int force, int resistance,int intelligence,int agilite){
         caracteristique = new HashMap<>();
@@ -24,7 +24,7 @@ public abstract class Creature implements Ressources {
         return vieRetire;
     }
     int attacker(String arme,Creature ennemi) {
-        int attaque = caracteristique.get("Force")+Integer.parseInt(descriptif[objets.get(arme)][1].toString());
+        int attaque = caracteristique.get("Force")+Integer.parseInt(descriptif[objets.get(arme)][2].toString());
         return perdreVie(ennemi,attaque);
     }
 }
